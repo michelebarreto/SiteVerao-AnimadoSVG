@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    background-color: #FFEAD4;
+    overflow-x: hidden;/*especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transborda do elemento*/
+}
+
+.container-header{
+    width: 100vw;
+}
+
+.lett-header{
+    position: absolute;
+    left: 50%;/*descrevem a borda esquerda de elementos*/
+    transform: translate(-50%);/*caracterizada por um vetor bidimensional. Suas coordenadas definem o quanto o elemento se move em cada direção.*/
+    width: 80%;
+    margin-top:10%;
+    fill:transparent;/*propriedade em CSS é para preencher a cor de uma forma SVG*/
+    /*animation aplica uma animação entre estilos*/
+    animation:lett-preenchimento 0.05 ease-in-out forwards 4s;
+}
+
+.lett-header path{
+    /*STROKE  atributo stroke é um atributo de apresentação que define a cor (ou qualquer SVG paint servers, como gradientes ou patterns) usado para pintar o contorno da forma;*/
+    stroke-width: 2px;
+    stroke:#BE253F;
+    stroke-dasharray: 3000;/*é para criar traços no traçado das formas SVG. Quanto maior o número, mais espaço entre os traços no traçado.*/
+    stroke-dashoffset: 3000;/*propriedade em CSS define a localização ao longo de um caminho SVG onde o traço de a strokecomeçará. Quanto maior o número, mais adiante o caminho começará os traços.*/
+    animation:let-tracado 5s ease-in-out forwards 1s;
+
+}
+
+h1, h2{
+    font-family:'pacifico', 'cursive';
+    color:#BE253F;
+    text-align:center;
+
+}
+h1{
+    font-size:3em;
+}
+h2{
+    font-size: 1.5em;
+}
+
+p{
+    font-family:'lato', 'sans-serif';
+    color:#484848;
+    font-size:1em;
+}
+
+.container-cards{
+    width:80%;
+    margin:auto;
+    display:flex;/*contêiner e se torna flexível*/
+}
+
+.card{
+    background-color:white;
+    border-radius:10px;
+    width:50%;
+    padding:20px;
+    margin:20px;
+}
+
+.lett-footer{
+    width:60%;
+    fill:#fff;/*transparencia*/
+    opacity:0.7;/*opacidade*/
+    position:absolute;
+    left:20%;
+    margin-top:20%;
+    
+}
+.container-footer{
+    position:relative;
+
+}
+.footer-infos{
+    text-align:center;
+
+}
+@keyframes lett-preenchimento{
+    /*Cada keyframe descreve como o elemento animado deveria se renderizar a um tempo dado durante a sequência de animação*/
+    to{
+        fill:#BE253F;
+    }
+}
+
+@keyframes lett-tracado{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
